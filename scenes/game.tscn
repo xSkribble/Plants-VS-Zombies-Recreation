@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://dylae3urpoe2v"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ld8pp"]
+size = Vector2(64, 648)
+
+[node name="GameWorld" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0, 0.17, 0.00283333, 1)
+
+[node name="HomeArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HomeArea"]
+position = Vector2(32, 324)
+shape = SubResource("RectangleShape2D_ld8pp")
