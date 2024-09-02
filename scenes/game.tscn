@@ -1,4 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://dylae3urpoe2v"]
+[gd_scene load_steps=3 format=3 uid="uid://dylae3urpoe2v"]
+
+[ext_resource type="PackedScene" uid="uid://b0cxytddb8aa2" path="res://scenes/zombie.tscn" id="1_gcuio"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ld8pp"]
 size = Vector2(64, 648)
@@ -15,3 +17,6 @@ color = Color(0, 0.17, 0.00283333, 1)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HomeArea"]
 position = Vector2(32, 324)
 shape = SubResource("RectangleShape2D_ld8pp")
+
+[node name="Zombie" parent="." instance=ExtResource("1_gcuio")]
+position = Vector2(960, 320)
