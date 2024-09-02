@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://dylae3urpoe2v"]
 
-[ext_resource type="PackedScene" uid="uid://b0cxytddb8aa2" path="res://scenes/zombie.tscn" id="1_gcuio"]
+[ext_resource type="PackedScene" uid="uid://dwwb2ce64xw61" path="res://scenes/lawn_row.tscn" id="1_00q52"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ld8pp"]
 size = Vector2(64, 648)
@@ -20,5 +20,7 @@ collision_mask = 2
 position = Vector2(32, 324)
 shape = SubResource("RectangleShape2D_ld8pp")
 
-[node name="Zombie" parent="." instance=ExtResource("1_gcuio")]
-position = Vector2(960, 320)
+[node name="Lawn" type="Node2D" parent="."]
+
+[node name="LawnRow3" parent="Lawn" instance=ExtResource("1_00q52")]
+position = Vector2(192, 320)
