@@ -13,6 +13,8 @@ offset_bottom = 648.0
 color = Color(0, 0.17, 0.00283333, 1)
 
 [node name="HomeArea" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HomeArea"]
 position = Vector2(32, 324)

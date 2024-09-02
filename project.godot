@@ -15,6 +15,12 @@ run/main_scene="res://scenes/game.tscn"
 config/features=PackedStringArray("4.3", "Mobile")
 config/icon="res://icon.svg"
 
+[layer_names]
+
+2d_physics/layer_1="Plants"
+2d_physics/layer_2="Zombies"
+2d_physics/layer_3="Home"
+
 [rendering]
 
 renderer/rendering_method="mobile"
