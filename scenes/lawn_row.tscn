@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dwwb2ce64xw61"]
 
 [ext_resource type="PackedScene" uid="uid://86dl4muq4f2x" path="res://scenes/lawn_tile.tscn" id="1_w7bnp"]
-[ext_resource type="PackedScene" uid="uid://b08g57vnpmik8" path="res://scenes/zombie_spawner.tscn" id="2_w746y"]
+[ext_resource type="PackedScene" uid="uid://b08g57vnpmik8" path="res://scenes/Zombie_spawner.tscn" id="2_w746y"]
 
 [node name="LawnRow" type="Node2D"]
 
