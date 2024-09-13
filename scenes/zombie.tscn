@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://b0cxytddb8aa2"]
+[gd_scene load_steps=4 format=3 uid="uid://b0cxytddb8aa2"]
 
-[ext_resource type="Texture2D" uid="uid://ncbn17vcrgqa" path="res://textures/Zombies/Zombie.png" id="1_d5moq"]
+[ext_resource type="Texture2D" uid="uid://ncbn17vcrgqa" path="res://textures/zombies/Zombie.png" id="1_d5moq"]
 
 [sub_resource type="GDScript" id="GDScript_bbpus"]
 script/source = "extends CharacterBody2D
@@ -8,42 +8,12 @@ script/source = "extends CharacterBody2D
 @export var SPEED: float = 10.0
 
 func _physics_process(_delta):
-	velocity.x = -SPEED
-	move_and_slide()
-
+    velocity.x = -SPEED
+    move_and_slide()
 "
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jlbd4"]
 radius = 64.0
-
-[sub_resource type="GDScript" id="GDScript_653xl"]
-script/source = "extends Sprite2D
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
-
-"
-
-[sub_resource type="GDScript" id="GDScript_d4sx0"]
-script/source = "extends Sprite2D
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
-"
 
 [node name="Zombie" type="CharacterBody2D"]
 collision_layer = 2
@@ -54,10 +24,8 @@ SPEED = 30.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_jlbd4")
-script = SubResource("GDScript_653xl")
 
 [node name="Zombie" type="Sprite2D" parent="."]
 position = Vector2(-7.5, -0.999992)
 scale = Vector2(0.43, 0.426)
 texture = ExtResource("1_d5moq")
-script = SubResource("GDScript_d4sx0")

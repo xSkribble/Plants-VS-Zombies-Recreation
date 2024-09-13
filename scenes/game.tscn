@@ -1,11 +1,11 @@
 [gd_scene load_steps=8 format=3 uid="uid://dylae3urpoe2v"]
 
 [ext_resource type="PackedScene" uid="uid://dwwb2ce64xw61" path="res://scenes/lawn_row.tscn" id="1_00q52"]
-[ext_resource type="Texture2D" uid="uid://ddkuh3yv0npc" path="res://textures/Plants/Peashooter.png" id="2_wj5a4"]
-[ext_resource type="Texture2D" uid="uid://dthd8qb6o8rr8" path="res://textures/Plants/Sunflower.png" id="3_nco4k"]
+[ext_resource type="Texture2D" uid="uid://ddkuh3yv0npc" path="res://textures/plants/Peashooter.png" id="2_wj5a4"]
+[ext_resource type="Texture2D" uid="uid://dthd8qb6o8rr8" path="res://textures/plants/Sunflower.png" id="3_nco4k"]
 [ext_resource type="Script" path="res://scenes/Sunflower.gd" id="4_6wrh3"]
-[ext_resource type="Texture2D" uid="uid://bslo4m0k5u66k" path="res://textures/Plants/Cherry Bomb.png" id="6_xfvgl"]
-[ext_resource type="Texture2D" uid="uid://igeww54locx" path="res://textures/Plants/Wall-Nut.png" id="7_w6ed8"]
+[ext_resource type="Texture2D" uid="uid://bslo4m0k5u66k" path="res://textures/plants/Cherry Bomb.png" id="6_xfvgl"]
+[ext_resource type="Texture2D" uid="uid://igeww54locx" path="res://textures/plants/Wall-Nut.png" id="7_w6ed8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ld8pp"]
 size = Vector2(64, 648)
