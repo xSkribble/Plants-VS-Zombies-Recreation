@@ -4,5 +4,5 @@ extends Node2D
 
 # every 2 seconds, spawn a zombie
 func _on_timer_timeout():
-    var zombie = zombie_scene.instantiate()
-    add_child(zombie)
+	var zombie = zombie_scene.instantiate()
+	add_child(zombie)
