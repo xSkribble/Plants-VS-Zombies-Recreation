@@ -1,16 +1,17 @@
 [gd_scene load_steps=2 format=3 uid="uid://86dl4muq4f2x"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_clj4n"]
-size = Vector2(96, 96)
+size = Vector2(45, 47)
 
 [node name="LawnTile" type="StaticBody2D" groups=["droppable"]]
 
 [node name="ColorRect" type="ColorRect" parent="."]
-offset_left = -48.0
-offset_top = -48.0
-offset_right = 48.0
-offset_bottom = 48.0
+offset_left = -22.0
+offset_top = -25.0
+offset_right = 23.0
+offset_bottom = 23.0
 color = Color(0, 0, 0, 0.396078)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, -1.5)
 shape = SubResource("RectangleShape2D_clj4n")

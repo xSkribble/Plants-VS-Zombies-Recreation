@@ -4,25 +4,35 @@
 [ext_resource type="PackedScene" uid="uid://b08g57vnpmik8" path="res://scenes/zombie_spawner.tscn" id="2_w746y"]
 
 [node name="LawnRow" type="Node2D"]
+position = Vector2(3, 0)
 
 [node name="Tiles" type="Node2D" parent="."]
 
 [node name="LawnTile1" parent="Tiles" instance=ExtResource("1_w7bnp")]
 
 [node name="LawnTile2" parent="Tiles" instance=ExtResource("1_w7bnp")]
-position = Vector2(128, 0)
+position = Vector2(71, 0)
 
 [node name="LawnTile3" parent="Tiles" instance=ExtResource("1_w7bnp")]
-position = Vector2(256, 0)
+position = Vector2(140, 0)
 
 [node name="LawnTile4" parent="Tiles" instance=ExtResource("1_w7bnp")]
-position = Vector2(384, 0)
+position = Vector2(206, 0)
 
 [node name="LawnTile5" parent="Tiles" instance=ExtResource("1_w7bnp")]
-position = Vector2(512, 0)
+position = Vector2(272, 0)
 
 [node name="LawnTile6" parent="Tiles" instance=ExtResource("1_w7bnp")]
-position = Vector2(640, 0)
+position = Vector2(337, 0)
+
+[node name="LawnTile7" parent="Tiles" instance=ExtResource("1_w7bnp")]
+position = Vector2(402, 0)
+
+[node name="LawnTile8" parent="Tiles" instance=ExtResource("1_w7bnp")]
+position = Vector2(471, 0)
+
+[node name="LawnTile9" parent="Tiles" instance=ExtResource("1_w7bnp")]
+position = Vector2(541, 0)
 
 [node name="ZombieSpawner" parent="." instance=ExtResource("2_w746y")]
-position = Vector2(896, 0)
+position = Vector2(913, 12)

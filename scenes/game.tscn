@@ -33,26 +33,26 @@ shape = SubResource("RectangleShape2D_ld8pp")
 
 [node name="Lawn" type="Node2D" parent="."]
 
-[node name="LawnRow3" parent="Lawn" instance=ExtResource("1_00q52")]
-position = Vector2(222, 310)
+[node name="LawnRow" parent="Lawn" instance=ExtResource("1_00q52")]
+position = Vector2(330, 524)
 
 [node name="Peashooter" type="Sprite2D" parent="."]
-position = Vector2(406, 510)
+position = Vector2(416, 363)
 scale = Vector2(0.299, 0.293)
 texture = ExtResource("2_wj5a4")
 
 [node name="Sunflower" type="Sprite2D" parent="."]
-position = Vector2(332, 511)
+position = Vector2(343, 367)
 scale = Vector2(0.29875, 0.311)
 texture = ExtResource("3_nco4k")
 script = ExtResource("4_6wrh3")
 
 [node name="CherryBomb" type="Sprite2D" parent="."]
-position = Vector2(537, 506)
+position = Vector2(535, 380)
 scale = Vector2(0.496, 0.517)
 texture = ExtResource("6_xfvgl")
 
 [node name="Wall-nut" type="Sprite2D" parent="."]
-position = Vector2(671, 495)
+position = Vector2(678, 384)
 scale = Vector2(0.599, 0.581)
 texture = ExtResource("7_w6ed8")
