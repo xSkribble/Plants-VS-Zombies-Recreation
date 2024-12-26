@@ -6,3 +6,7 @@ func _physics_process(_delta):
 	velocity.x = -SPEED
 	move_and_slide()
 
+var health =  10
+
+func take_damage(amount):
+	health -= amount 

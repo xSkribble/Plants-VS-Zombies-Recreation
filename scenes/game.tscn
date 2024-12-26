@@ -1,58 +1,55 @@
-[gd_scene load_steps=9 format=3 uid="uid://dylae3urpoe2v"]
+[gd_scene load_steps=7 format=3 uid="uid://dylae3urpoe2v"]
 
 [ext_resource type="PackedScene" uid="uid://dwwb2ce64xw61" path="res://scenes/lawn_row.tscn" id="1_00q52"]
 [ext_resource type="Texture2D" uid="uid://coh17eqdeqaa3" path="res://scenes/Grasswalk.jpg" id="1_ufc1b"]
 [ext_resource type="Texture2D" uid="uid://ddkuh3yv0npc" path="res://textures/plants/Peashooter.png" id="2_wj5a4"]
-[ext_resource type="Texture2D" uid="uid://dthd8qb6o8rr8" path="res://textures/plants/Sunflower.png" id="3_nco4k"]
-[ext_resource type="Script" path="res://scenes/Sunflower.gd" id="4_6wrh3"]
-[ext_resource type="Texture2D" uid="uid://bslo4m0k5u66k" path="res://textures/plants/Cherry Bomb.png" id="6_xfvgl"]
-[ext_resource type="Texture2D" uid="uid://igeww54locx" path="res://textures/plants/Wall-Nut.png" id="7_w6ed8"]
+[ext_resource type="Texture2D" uid="uid://dkb7v7nqrdhiu" path="res://textures/projectiles/Pea.png" id="7_fkgdo"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ld8pp"]
-size = Vector2(64, 648)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tttqu"]
+size = Vector2(46, 34.5)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7cedm"]
+radius = 12.8
 
 [node name="GameWorld" type="Node2D"]
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="Grasswalk" type="TextureRect" parent="."]
+offset_left = 1.0
 offset_right = 1152.0
-offset_bottom = 648.0
-color = Color(0, 0.17, 0.00283333, 1)
-
-[node name="Grasswalk" type="Sprite2D" parent="ColorRect"]
-position = Vector2(577, 322)
-scale = Vector2(0.382667, 0.216)
+offset_bottom = 647.0
 texture = ExtResource("1_ufc1b")
-
-[node name="HomeArea" type="Area2D" parent="."]
-collision_layer = 4
-collision_mask = 2
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="HomeArea"]
-position = Vector2(32, 324)
-shape = SubResource("RectangleShape2D_ld8pp")
+expand_mode = 1
 
 [node name="Lawn" type="Node2D" parent="."]
 
 [node name="LawnRow" parent="Lawn" instance=ExtResource("1_00q52")]
+position = Vector2(343, 485)
+
+[node name="Lawn 2" type="Node2D" parent="."]
+
+[node name="LawnRow" parent="Lawn 2" instance=ExtResource("1_00q52")]
 position = Vector2(330, 524)
 
-[node name="Peashooter" type="Sprite2D" parent="."]
-position = Vector2(416, 363)
-scale = Vector2(0.299, 0.293)
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+position = Vector2(326, 516)
+
+[node name="Peashooter" type="Sprite2D" parent="CharacterBody2D"]
+position = Vector2(0, 2)
+scale = Vector2(0.359, 0.346)
 texture = ExtResource("2_wj5a4")
 
-[node name="Sunflower" type="Sprite2D" parent="."]
-position = Vector2(343, 367)
-scale = Vector2(0.29875, 0.311)
-texture = ExtResource("3_nco4k")
-script = ExtResource("4_6wrh3")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(1, 4)
+shape = SubResource("RectangleShape2D_tttqu")
 
-[node name="CherryBomb" type="Sprite2D" parent="."]
-position = Vector2(535, 380)
-scale = Vector2(0.496, 0.517)
-texture = ExtResource("6_xfvgl")
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
 
-[node name="Wall-nut" type="Sprite2D" parent="."]
-position = Vector2(678, 384)
-scale = Vector2(0.599, 0.581)
-texture = ExtResource("7_w6ed8")
+[node name="Pea" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(362, 541)
+scale = Vector2(0.625, 0.621)
+texture = ExtResource("7_fkgdo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(367, 497)
+scale = Vector2(0.625, 0.621)
+shape = SubResource("CircleShape2D_7cedm")

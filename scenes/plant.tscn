@@ -1,17 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://drbmqc1oevbwl"]
-
-[ext_resource type="Texture2D" uid="uid://bthngtehwycvh" path="res://icon.svg" id="2_4nr2l"]
+[gd_scene load_steps=2 format=3 uid="uid://drbmqc1oevbwl"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jlbd4"]
 radius = 64.0
 
 [node name="Plant" type="StaticBody2D"]
 collision_mask = 2
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-self_modulate = Color(0, 0.557068, 0.023889, 1)
-scale = Vector2(0.75, 0.75)
-texture = ExtResource("2_4nr2l")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_jlbd4")
