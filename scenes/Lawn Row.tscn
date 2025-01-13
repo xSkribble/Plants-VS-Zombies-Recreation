@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://e6m1i6dmujf7"]
+
+[ext_resource type="PackedScene" uid="uid://c0vgx02klpfgu" path="res://scenes/Game Over.tscn" id="1_r8l8j"]
+[ext_resource type="PackedScene" uid="uid://b08g57vnpmik8" path="res://scenes/Zombie Spawner.tscn" id="2_ytd5o"]
+
+[node name="LawnRow" type="Node2D"]
+position = Vector2(-148, 0)
+
+[node name="Lawn" type="Node2D" parent="."]
+position = Vector2(0, 1)
+
+[node name="Lawn" parent="Lawn" instance=ExtResource("1_r8l8j")]
+disable_mode = 1
+
+[node name="ZombieSpawner" parent="." instance=ExtResource("2_ytd5o")]
+position = Vector2(1818, 0)

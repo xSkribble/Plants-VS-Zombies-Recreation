@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://daw83mmednoyo"
-path="res://.godot/imported/Peashooter.png-30173820061081a940f0d527fe4f76c0.ctex"
+uid="uid://dw58t21oj202"
+path="res://.godot/imported/Zombie Left Arm.png-53f5b4628df3cc08c3bf9997f44fbdc7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://textures/plants/Peashooter.png"
-dest_files=["res://.godot/imported/Peashooter.png-30173820061081a940f0d527fe4f76c0.ctex"]
+source_file="res://textures/zombies/Zombie Left Arm.png"
+dest_files=["res://.godot/imported/Zombie Left Arm.png-53f5b4628df3cc08c3bf9997f44fbdc7.ctex"]
 
 [params]
 

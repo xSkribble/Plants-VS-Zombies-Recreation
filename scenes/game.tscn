@@ -1,55 +1,48 @@
 [gd_scene load_steps=7 format=3 uid="uid://dylae3urpoe2v"]
 
-[ext_resource type="PackedScene" uid="uid://dwwb2ce64xw61" path="res://scenes/lawn_row.tscn" id="1_00q52"]
-[ext_resource type="Texture2D" uid="uid://coh17eqdeqaa3" path="res://scenes/Grasswalk.jpg" id="1_ufc1b"]
-[ext_resource type="Texture2D" uid="uid://ddkuh3yv0npc" path="res://textures/plants/Peashooter.png" id="2_wj5a4"]
-[ext_resource type="Texture2D" uid="uid://dkb7v7nqrdhiu" path="res://textures/projectiles/Pea.png" id="7_fkgdo"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_tttqu"]
-size = Vector2(46, 34.5)
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_7cedm"]
-radius = 12.8
+[ext_resource type="PackedScene" uid="uid://e6m1i6dmujf7" path="res://scenes/Lawn Row.tscn" id="1_00q52"]
+[ext_resource type="Texture2D" uid="uid://coh17eqdeqaa3" path="res://textures/background/Grasswalk.jpg" id="1_n5xmr"]
+[ext_resource type="PackedScene" uid="uid://c3m77go60g1su" path="res://scenes/Tile Row.tscn" id="5_b82nc"]
+[ext_resource type="PackedScene" uid="uid://3wtnevi137yx" path="res://scenes/Peashooter.tscn" id="5_elyqy"]
+[ext_resource type="Texture2D" uid="uid://bfx1gs7vmqvk0" path="res://textures/background/Selection Box.png" id="5_hd101"]
+[ext_resource type="Texture2D" uid="uid://ck4lokidl6w1r" path="res://textures/plants/Peashooter Seed.png" id="6_2enxh"]
 
 [node name="GameWorld" type="Node2D"]
 
+[node name="Camera2D" type="Camera2D" parent="."]
+rotation = -4.65646
+
 [node name="Grasswalk" type="TextureRect" parent="."]
-offset_left = 1.0
-offset_right = 1152.0
-offset_bottom = 647.0
-texture = ExtResource("1_ufc1b")
+offset_left = -865.0
+offset_top = -504.0
+offset_right = 872.0
+offset_bottom = 497.0
+texture = ExtResource("1_n5xmr")
 expand_mode = 1
 
-[node name="Lawn" type="Node2D" parent="."]
+[node name="Gameover" type="Node2D" parent="."]
 
-[node name="LawnRow" parent="Lawn" instance=ExtResource("1_00q52")]
-position = Vector2(343, 485)
+[node name="Gameover" parent="Gameover" instance=ExtResource("1_00q52")]
+position = Vector2(-528, 258)
 
-[node name="Lawn 2" type="Node2D" parent="."]
+[node name="Gameover 2" type="Node2D" parent="."]
 
-[node name="LawnRow" parent="Lawn 2" instance=ExtResource("1_00q52")]
-position = Vector2(330, 524)
+[node name="Gameover" parent="Gameover 2" instance=ExtResource("1_00q52")]
+position = Vector2(-550, 333)
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
-position = Vector2(326, 516)
+[node name="Tile" type="Node2D" parent="."]
 
-[node name="Peashooter" type="Sprite2D" parent="CharacterBody2D"]
-position = Vector2(0, 2)
-scale = Vector2(0.359, 0.346)
-texture = ExtResource("2_wj5a4")
+[node name="Tilerow" parent="Tile" instance=ExtResource("5_b82nc")]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-position = Vector2(1, 4)
-shape = SubResource("RectangleShape2D_tttqu")
+[node name="SelectionBox" type="Sprite2D" parent="."]
+position = Vector2(-295, -426)
+scale = Vector2(2.387, 2.326)
+texture = ExtResource("5_hd101")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
+[node name="Peashooter" parent="." instance=ExtResource("5_elyqy")]
+position = Vector2(-371, 286)
 
-[node name="Pea" type="Sprite2D" parent="StaticBody2D"]
-position = Vector2(362, 541)
-scale = Vector2(0.625, 0.621)
-texture = ExtResource("7_fkgdo")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(367, 497)
-scale = Vector2(0.625, 0.621)
-shape = SubResource("CircleShape2D_7cedm")
+[node name="PeashooterSeed" type="Sprite2D" parent="."]
+position = Vector2(-603, -410)
+scale = Vector2(0.508238, 0.479148)
+texture = ExtResource("6_2enxh")

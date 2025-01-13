@@ -1,10 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://86dl4muq4f2x"]
+[gd_scene load_steps=2 format=3 uid="uid://c0vgx02klpfgu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_clj4n"]
-size = Vector2(45, 47)
+size = Vector2(45, 112.5)
 
-[node name="LawnTile" type="StaticBody2D" groups=["droppable"]]
+[node name="Gameover" type="StaticBody2D" groups=["droppable"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0.5, -1.5)
+position = Vector2(0, -32.75)
 shape = SubResource("RectangleShape2D_clj4n")

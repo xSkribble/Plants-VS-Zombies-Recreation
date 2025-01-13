@@ -11,9 +11,16 @@ config_version=5
 [application]
 
 config/name="Plants VS Zombies Recreation"
-run/main_scene="res://scenes/game.tscn"
-config/features=PackedStringArray("4.2", "Mobile")
+run/main_scene="res://scenes/Game.tscn"
+config/features=PackedStringArray("4.3", "Mobile")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=480
+window/size/viewport_height=270
+window/size/window_width_override=1920
+window/size/window_height_override=1080
 
 [global_group]
 

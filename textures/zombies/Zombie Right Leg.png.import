@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://coh17eqdeqaa3"
-path="res://.godot/imported/Grasswalk.jpg-5e3419e26e9c84cab5480969b96d8e4d.ctex"
+uid="uid://dorprcnve38tl"
+path="res://.godot/imported/Zombie Right Leg.png-f0df7adab92f668e3fa2102747b84976.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/Grasswalk.jpg"
-dest_files=["res://.godot/imported/Grasswalk.jpg-5e3419e26e9c84cab5480969b96d8e4d.ctex"]
+source_file="res://textures/zombies/Zombie Right Leg.png"
+dest_files=["res://.godot/imported/Zombie Right Leg.png-f0df7adab92f668e3fa2102747b84976.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://daw83mmednoyo"
-path="res://.godot/imported/Peashooter.png-30173820061081a940f0d527fe4f76c0.ctex"
+uid="uid://0eurg70c7lxw"
+path="res://.godot/imported/Zombie Jaw.png-7892d57d24c26f9013f0a508461060b1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://textures/plants/Peashooter.png"
-dest_files=["res://.godot/imported/Peashooter.png-30173820061081a940f0d527fe4f76c0.ctex"]
+source_file="res://textures/zombies/Zombie Jaw.png"
+dest_files=["res://.godot/imported/Zombie Jaw.png-7892d57d24c26f9013f0a508461060b1.ctex"]
 
 [params]
 

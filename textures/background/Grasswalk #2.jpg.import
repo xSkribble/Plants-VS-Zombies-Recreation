@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://daw83mmednoyo"
-path="res://.godot/imported/Peashooter.png-30173820061081a940f0d527fe4f76c0.ctex"
+uid="uid://gopj70cju0au"
+path="res://.godot/imported/Grasswalk #2.jpg-6fb5573004883cb8fd61e93ba208d2d3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://textures/plants/Peashooter.png"
-dest_files=["res://.godot/imported/Peashooter.png-30173820061081a940f0d527fe4f76c0.ctex"]
+source_file="res://textures/background/Grasswalk #2.jpg"
+dest_files=["res://.godot/imported/Grasswalk #2.jpg-6fb5573004883cb8fd61e93ba208d2d3.ctex"]
 
 [params]
 
