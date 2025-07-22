@@ -13,4 +13,4 @@ position = Vector2(0, 1)
 disable_mode = 1
 
 [node name="ZombieSpawner" parent="." instance=ExtResource("2_ytd5o")]
-position = Vector2(1818, 0)
+position = Vector2(1146, 1)

@@ -1,6 +1,6 @@
-[gd_scene load_steps=21 format=3 uid="uid://b0cxytddb8aa2"]
+[gd_scene load_steps=21 format=3 uid="uid://dmsf5yla1a0bc"]
 
-[ext_resource type="Script" path="res://scripts/Zombie.gd" id="1_wkm48"]
+[ext_resource type="Script" uid="uid://blbt16j0vpre" path="res://scripts/zombie.gd" id="1_wkm48"]
 [ext_resource type="Texture2D" uid="uid://bkb3e0cf2qhvf" path="res://textures/zombies/Zombie Head.png" id="2_pnp80"]
 [ext_resource type="Texture2D" uid="uid://0eurg70c7lxw" path="res://textures/zombies/Zombie Jaw.png" id="3_2xopn"]
 [ext_resource type="Texture2D" uid="uid://bpysi2mbk5nu1" path="res://textures/zombies/Zombie Right Arm.png" id="4_hm7l3"]
@@ -530,8 +530,8 @@ tracks/21/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_fwk8s"]
 _data = {
-"RESET": SubResource("Animation_4hlcx"),
-"Walk": SubResource("Animation_i1drl")
+&"RESET": SubResource("Animation_4hlcx"),
+&"Walk": SubResource("Animation_i1drl")
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_seyte"]
@@ -567,7 +567,7 @@ metadata/_edit_lock_ = true
 position = Vector2(24.6845, 3.26847)
 rotation = -2.56757
 scale = Vector2(0.285861, 0.344222)
-skew = 0.0405883
+skew = 0.0405884
 rest = Transform2D(-0.237667, -0.158843, 0.202727, -0.278191, 24.6845, 3.26847)
 
 [node name="ZombieHead" type="Sprite2D" parent="Skeleton2D/Torso/Head"]
@@ -793,7 +793,7 @@ metadata/_edit_lock_ = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_fwk8s")
+&"": SubResource("AnimationLibrary_fwk8s")
 }
 autoplay = "Walk"
 

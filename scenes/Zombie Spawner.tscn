@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://b08g57vnpmik8"]
 
-[ext_resource type="Script" path="res://scripts/Zombie Spawner.gd" id="1_pb2on"]
-[ext_resource type="PackedScene" uid="uid://b0cxytddb8aa2" path="res://scenes/Zombie.tscn" id="2_dkpqx"]
+[ext_resource type="Script" uid="uid://b2njyuyl47rd7" path="res://scripts/Zombie Spawner.gd" id="1_pb2on"]
+[ext_resource type="PackedScene" uid="uid://dmsf5yla1a0bc" path="res://scenes/zombie.tscn" id="2_dkpqx"]
 
 [node name="ZombieSpawner" type="Node2D"]
 script = ExtResource("1_pb2on")

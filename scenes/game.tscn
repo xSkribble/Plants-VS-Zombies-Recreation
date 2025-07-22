@@ -1,48 +1,100 @@
-[gd_scene load_steps=7 format=3 uid="uid://dylae3urpoe2v"]
+[gd_scene load_steps=9 format=3 uid="uid://dylae3urpoe2v"]
 
 [ext_resource type="PackedScene" uid="uid://e6m1i6dmujf7" path="res://scenes/Lawn Row.tscn" id="1_00q52"]
-[ext_resource type="Texture2D" uid="uid://coh17eqdeqaa3" path="res://textures/background/Grasswalk.jpg" id="1_n5xmr"]
+[ext_resource type="Texture2D" uid="uid://epah2gvl1fi" path="res://textures/background/Grasswalk Remake.png" id="1_cpr0p"]
+[ext_resource type="Script" uid="uid://ctnw5jx7dupo7" path="res://scripts/Game World.gd" id="1_s0nni"]
+[ext_resource type="PackedScene" uid="uid://3wtnevi137yx" path="res://scenes/Peashooter.tscn" id="2_78awf"]
 [ext_resource type="PackedScene" uid="uid://c3m77go60g1su" path="res://scenes/Tile Row.tscn" id="5_b82nc"]
-[ext_resource type="PackedScene" uid="uid://3wtnevi137yx" path="res://scenes/Peashooter.tscn" id="5_elyqy"]
-[ext_resource type="Texture2D" uid="uid://bfx1gs7vmqvk0" path="res://textures/background/Selection Box.png" id="5_hd101"]
-[ext_resource type="Texture2D" uid="uid://ck4lokidl6w1r" path="res://textures/plants/Peashooter Seed.png" id="6_2enxh"]
+
+[sub_resource type="Animation" id="Animation_s0nni"]
+resource_name = "Camera"
+length = 12.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 0,
+"values": []
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(2.03333, 5.03333, 8, 11.0333),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(1920, 0), Vector2(1920, 0), Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_aug50"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1920, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_aug50"]
+_data = {
+&"Camera": SubResource("Animation_s0nni"),
+&"RESET": SubResource("Animation_aug50")
+}
 
 [node name="GameWorld" type="Node2D"]
+script = ExtResource("1_s0nni")
 
-[node name="Camera2D" type="Camera2D" parent="."]
-rotation = -4.65646
-
-[node name="Grasswalk" type="TextureRect" parent="."]
-offset_left = -865.0
-offset_top = -504.0
-offset_right = 872.0
-offset_bottom = 497.0
-texture = ExtResource("1_n5xmr")
+[node name="Background" type="TextureRect" parent="."]
+offset_left = -960.0
+offset_top = -540.0
+offset_right = 960.0
+offset_bottom = 540.0
+texture = ExtResource("1_cpr0p")
 expand_mode = 1
 
+[node name="AnimationCamera" type="AnimationPlayer" parent="."]
+root_node = NodePath("../Camera2D")
+libraries = {
+&"": SubResource("AnimationLibrary_aug50")
+}
+autoplay = "Camera"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(1920, 0)
+rotation = 0.000520833
+scale = Vector2(3000, 3000)
+position_smoothing_enabled = true
+
+[node name="Peashooter" parent="." instance=ExtResource("2_78awf")]
+position = Vector2(-292, 319)
+
 [node name="Gameover" type="Node2D" parent="."]
+position = Vector2(-25, -5)
 
 [node name="Gameover" parent="Gameover" instance=ExtResource("1_00q52")]
-position = Vector2(-528, 258)
+position = Vector2(-519, 279)
 
 [node name="Gameover 2" type="Node2D" parent="."]
 
 [node name="Gameover" parent="Gameover 2" instance=ExtResource("1_00q52")]
-position = Vector2(-550, 333)
+position = Vector2(-543, 352)
 
 [node name="Tile" type="Node2D" parent="."]
 
 [node name="Tilerow" parent="Tile" instance=ExtResource("5_b82nc")]
 
-[node name="SelectionBox" type="Sprite2D" parent="."]
-position = Vector2(-295, -426)
-scale = Vector2(2.387, 2.326)
-texture = ExtResource("5_hd101")
-
-[node name="Peashooter" parent="." instance=ExtResource("5_elyqy")]
-position = Vector2(-371, 286)
-
-[node name="PeashooterSeed" type="Sprite2D" parent="."]
-position = Vector2(-603, -410)
-scale = Vector2(0.508238, 0.479148)
-texture = ExtResource("6_2enxh")
+[connection signal="animation_changed" from="AnimationCamera" to="." method="_on_animation_camera_animation_changed"]
